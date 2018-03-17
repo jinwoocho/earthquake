@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Aftershock</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCk5upYmaha3CZhHdeWaPU5F7e23Il_lIo&libraries=places"></script>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span id="headerName">Aftershock<span>Magnitudes 4.5 & Higher</span></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navBar">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-refresh"></span></a>
+                </li>
+                <li>
+                    <a href="#"><span><i class="fa fa-twitter"></i></span></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-calendar"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <div class="btn btn-group-justified" id="dropdownList">
+                            <li><button class="daySelector btn btn-warning btn-lg btn-block" value="1" id = "1day">Today</button></li>
+                            <li><button class="daySelector btn btn-warning btn-lg btn-block" value="7" id = "7day">Last Week</button></li>
+                            <li><button class="daySelector btn btn-warning btn-lg btn-block" value="30" id = "30day">Last Month</button></li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="input-group form-group">
+                            <input type="text" class="form-control" placeholder="Enter Location" name="search" id = "address" value="Guam">
+                            <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="testPanel" >
+    <div class="panel-heading " id="left-side-menu"> Menu <p class="glyphicon glyphicon-info-sign"></p></div>
+    <div class="panel-body">
+        <p>Earthquakes can be a frightening experience, especially when they happen out of the blue.</p>
+        <p>Our goal here at Aftershock is to keep you and your loved ones safe and informed.</p>
+        <p>We advise that you review the links below with your friends and family to prepare a safety plan in case of an emergency.</p></div>
+        <a href="https://www.youtube.com/watch?v=dJpIU1rSOFY" class="list-group-item">What Are Earthquakes?</a>
+        <a href="https://emergency.cdc.gov/preparedness/" class="list-group-item">Emergency Preparedness Information</a>
+        <a href="http://www.redcross.org/volunteer/volunteer-opportunities/disaster-volunteer" class="list-group-item">Volunteer w/ Disaster Relief</a>
+        <a href="http://www.redcross.org/get-help/disaster-relief-and-recovery/find-an-open-shelter" class="list-group-item">Red Cross Shelters</a>
+    <div class="panel-footer"><em>Note: Map is currently showing the past 30 days.</em></div>
+</div>
+<div class="rightPanel">
+    <div class="panel-heading">Local Earthquake Tweets</div>
+    <p id="tweetInfo">Click red circles to view tweets about Earthquakes!</p>
+    <div class="panel-body" id="twitter"></div>
+</div>
+<div id='map' style="position: static"></div>
+</body>
+</html>

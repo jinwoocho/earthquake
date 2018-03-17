@@ -1,0 +1,122 @@
+html, body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#map {
+	height: 100%;
+	position: static !important;
+}
+@font-face {
+	font-family: earthquakefont;
+	src: url(earthquake.ttf);
+}
+.navbar-inverse {
+	z-index: 1;
+	margin-bottom: 0;
+}
+.navbar-brand {
+	font-size: 3.5vmin;
+	font-family: earthquakefont;
+}
+a > span >span {
+	font-size: 1.5vmin;
+	font-family: Open Sans, serif;
+	padding-left: 3%;
+}
+body{
+	background-color: lavender;
+}
+
+.glyphicon {
+	font-size: 2vmin;
+}
+/*joshs only line of CSS*/
+.daySelector {
+	font-size: 100%;
+}
+
+.fa-twitter {
+	font-size: 2.5vmin !important;
+}
+
+#dropdownList {
+	width: 100%
+}
+.dropdown-menu {
+	background-color: black;
+	opacity: 0.8;
+}
+.marker {
+	top: 7px;
+}
+.testPanel {
+	position: absolute;
+	width: 40vh;
+	background-color: #dddddd;
+	transform: translateX(0px);
+	transition: all .2s;
+	z-index: 1;
+	top: 21%;
+	opacity: .9;
+}
+.testPanel.on {
+	transform: translateX(-50vh);
+}
+.rightPanel {
+	right: 0;
+	position: absolute;
+	top: 21%;
+	width: 35vh;
+	background-color: #dddddd;
+	height: 60vh;
+	transform: translateX(500px);
+	transition: all .3s;
+	z-index: 2;
+	opacity: .9;
+	overflow: hidden;
+	overflow-y: auto;
+}
+.rightPanel.on {
+	transform: translateX(0);
+}
+.panel-heading {
+	background-color: #0084b4;
+	color: white;
+	text-align: center;
+	font-size: 2.5vmin;
+	width: 100%;
+}
+.twitterFeed {
+	padding-left: 8%;
+	font-size: 15px;
+}
+.imgtweet {
+	width: 50px;
+	height: 50px;
+	line-height: 1em;
+}
+#tweetInfo {
+	text-align: center;
+	font-size: 1.2em;
+}
+.row {
+	margin-left: -15px;
+	margin-bottom: 2vmin;
+	height: 10%;
+}
+#left-side-menu {
+	width: 100%;
+	text-align: center;
+	font-size: 25px;
+}
+.panel-body {
+	font-size: 13px;
+}
+.panel-footer {
+	font-size: 12px;
+}
+.list-group-item{
+	font-size: 12px;
+}
